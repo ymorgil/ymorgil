@@ -1,4 +1,4 @@
-## Bienvenido al perfil de Yeray 👋
+## Bienvenidos al perfil de Yeray 👋
 
 <!--
 **ymorgil/ymorgil** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
