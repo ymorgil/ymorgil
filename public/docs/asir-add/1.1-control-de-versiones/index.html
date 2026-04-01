@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content=":cyclone: 1.1 CONTROL DE VERSIONES# :cyclone: 1.1 CONTROL DE VERSIONES 1. 💻 CONCEPTOS BÁSICOS DE GIT Configuración Comandos básicos 2. 🌿 RAMAS Comandos básicos para ramas Ramas remotas en Git Comandos de historial y navegación Creación de alias 3. 🐱 GITHUB Repositorios Repositorio remoto en GitHub ⇒ 01 GitHub ⇒ 02 Autenticación SSH ⇒ 03 Sincronizar repositorios Flujo colaborativo Herramientas para Git y GitHub Aplicaciones con interfaz gráfica GitHub Pages 3. 📄 Markdown 4. 🌐Enlaces de interés # :cyclone: 1.1 CONTROL DE VERSIONES# ">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/asir-add/1.1-control-de-versiones/">
+  <meta property="og:site_name" content="Proyecto ymorgil">
+  <meta property="og:title" content="Proyecto ymorgil">
+  <meta property="og:description" content=":cyclone: 1.1 CONTROL DE VERSIONES# :cyclone: 1.1 CONTROL DE VERSIONES 1. 💻 CONCEPTOS BÁSICOS DE GIT Configuración Comandos básicos 2. 🌿 RAMAS Comandos básicos para ramas Ramas remotas en Git Comandos de historial y navegación Creación de alias 3. 🐱 GITHUB Repositorios Repositorio remoto en GitHub ⇒ 01 GitHub ⇒ 02 Autenticación SSH ⇒ 03 Sincronizar repositorios Flujo colaborativo Herramientas para Git y GitHub Aplicaciones con interfaz gráfica GitHub Pages 3. 📄 Markdown 4. 🌐Enlaces de interés # :cyclone: 1.1 CONTROL DE VERSIONES#">
+  <meta property="og:locale" content="es">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+
+
+  <meta itemprop="name" content="Proyecto ymorgil">
+  <meta itemprop="description" content=":cyclone: 1.1 CONTROL DE VERSIONES# :cyclone: 1.1 CONTROL DE VERSIONES 1. 💻 CONCEPTOS BÁSICOS DE GIT Configuración Comandos básicos 2. 🌿 RAMAS Comandos básicos para ramas Ramas remotas en Git Comandos de historial y navegación Creación de alias 3. 🐱 GITHUB Repositorios Repositorio remoto en GitHub ⇒ 01 GitHub ⇒ 02 Autenticación SSH ⇒ 03 Sincronizar repositorios Flujo colaborativo Herramientas para Git y GitHub Aplicaciones con interfaz gráfica GitHub Pages 3. 📄 Markdown 4. 🌐Enlaces de interés # :cyclone: 1.1 CONTROL DE VERSIONES#">
+  <meta itemprop="wordCount" content="3714">
+
+<title>1.1 Control De Versiones | Proyecto ymorgil</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/docs/asir-add/1.1-control-de-versiones/">
+<link rel="stylesheet" href="/book.min.b267f830fdf65302ecc1702a1178d4f25aa783409b3a25098f3404dd24f37a4d.css" integrity="sha256-smf4MP32UwLswXAqEXjU8lqng0CbOiUJjzQE3STzek0=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.9a447797772fdfe44b001608124330fd7e7799811c25f079238ee14ccef38c33.js" integrity="sha256-mkR3l3cv3&#43;RLABYIEkMw/X53mYEcJfB5I47hTM7zjDM=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Proyecto ymorgil</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Buscar"
+    aria-label="Buscar"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d06280a05c1ec509c900a858a28f8f9e" class="toggle"  />
+    <label for="section-d06280a05c1ec509c900a858a28f8f9e" class="flex">
+      <a role="button" class="">
+        General</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general/pautas_curso/" class="">
+      Pautas del Curso</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general/configuraciones_b%C3%A1sicas/" class="">
+      Configuraciones Básicas</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general/manual_veyon/" class="">
+      Manual Veyon</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/general/readme/" class="">
+      Readme</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a0e0b0e50a6f6c8979cb6addcc77425b" class="toggle" checked />
+    <label for="section-a0e0b0e50a6f6c8979cb6addcc77425b" class="flex">
+      <a role="button" class="">
+        ASIR</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/asir-add/1.1-control-de-versiones/" class="active">
+      1.1 Control De Versiones</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/asir-add/exa/a/" class="">
+      A</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/asir-add/readme/" class="">
+      Readme</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-47e66dffe4b556090555dc2686710cca" class="toggle"  />
+    <label for="section-47e66dffe4b556090555dc2686710cca" class="flex">
+      <a role="button" class="">
+        Docker</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" alt="Expand" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/docker/01-docker/" class="">
+      01 Docker</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/docker/02-docker-vsc/" class="">
+      02 Docker Vsc</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>1.1 Control De Versiones</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#heading"> </a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#configuración">Configuración</a></li>
+    <li><a href="#comandos-básicos">Comandos básicos</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#comandos-básicos-para-ramas">Comandos básicos para ramas</a></li>
+    <li><a href="#ramas-remotas-en-git">Ramas remotas en Git</a></li>
+    <li><a href="#comandos-de-historial-y-navegación">Comandos de historial y navegación</a></li>
+    <li><a href="#creación-de-alias">Creación de alias</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#repositorios">Repositorios</a></li>
+    <li><a href="#repositorio-remoto-en-github">Repositorio remoto en GitHub</a>
+      <ul>
+        <li><a href="#-01-github"><strong>⇒ 01 GitHub</strong></a></li>
+        <li><a href="#-02-autenticación-ssh"><strong>⇒ 02 Autenticación SSH</strong></a></li>
+        <li><a href="#-03-sincronizar-repositorios"><strong>⇒ 03 Sincronizar repositorios</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#flujo-colaborativo">Flujo colaborativo</a></li>
+    <li><a href="#herramientas-para-git-y-github">Herramientas para Git y GitHub</a>
+      <ul>
+        <li><a href="#aplicaciones-con-interfaz-gráfica">Aplicaciones con interfaz gráfica</a></li>
+        <li><a href="#github-pages">GitHub Pages</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="cyclone-11-control-de-versiones"><strong>:cyclone: 1.1 CONTROL DE VERSIONES</strong><a class="anchor" href="#cyclone-11-control-de-versiones">#</a></h1>
+<ul>
+<li><a href="#cyclone-11-control-de-versiones"><strong>:cyclone: 1.1 CONTROL DE VERSIONES</strong></a></li>
+<li><a href="#1--conceptos-b%c3%a1sicos-de-git"><strong>1. 💻 CONCEPTOS BÁSICOS DE GIT</strong></a>
+<ul>
+<li><a href="#configuraci%c3%b3n">Configuración</a></li>
+<li><a href="#comandos-b%c3%a1sicos">Comandos básicos</a></li>
+</ul>
+</li>
+<li><a href="#2--ramas"><strong>2. 🌿 RAMAS</strong></a>
+<ul>
+<li><a href="#comandos-b%c3%a1sicos-para-ramas">Comandos básicos para ramas</a></li>
+<li><a href="#ramas-remotas-en-git">Ramas remotas en Git</a></li>
+<li><a href="#comandos-de-historial-y-navegaci%c3%b3n">Comandos de historial y navegación</a></li>
+<li><a href="#creaci%c3%b3n-de-alias">Creación de alias</a></li>
+</ul>
+</li>
+<li><a href="#3--github"><strong>3. 🐱 GITHUB</strong></a>
+<ul>
+<li><a href="#repositorios">Repositorios</a></li>
+<li><a href="#repositorio-remoto-en-github">Repositorio remoto en GitHub</a>
+<ul>
+<li><a href="#-01-github"><strong>⇒ 01 GitHub</strong></a></li>
+<li><a href="#-02-autenticaci%c3%b3n-ssh"><strong>⇒ 02 Autenticación SSH</strong></a></li>
+<li><a href="#-03-sincronizar-repositorios"><strong>⇒ 03 Sincronizar repositorios</strong></a></li>
+</ul>
+</li>
+<li><a href="#flujo-colaborativo">Flujo colaborativo</a></li>
+<li><a href="#herramientas-para-git-y-github">Herramientas para Git y GitHub</a>
+<ul>
+<li><a href="#aplicaciones-con-interfaz-gr%c3%a1fica">Aplicaciones con interfaz gráfica</a></li>
+<li><a href="#github-pages">GitHub Pages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#3--markdown"><strong>3. 📄 Markdown</strong></a></li>
+<li><a href="#4-enlaces-de-inter%c3%a9s"><strong>4. 🌐Enlaces de interés</strong></a></li>
+</ul>
+<h2 id="heading"> <a class="anchor" href="#heading">#</a></h2>
+<h1 id="cyclone-11-control-de-versiones-1"><strong>:cyclone: 1.1 CONTROL DE VERSIONES</strong><a class="anchor" href="#cyclone-11-control-de-versiones-1">#</a></h1>
+<p> </p>
+<h1 id="1--conceptos-básicos-de-git"><strong>1. 💻 CONCEPTOS BÁSICOS DE GIT</strong><a class="anchor" href="#1--conceptos-b%c3%a1sicos-de-git">#</a></h1>
+<p>Git es un sistema de <strong>control de versiones</strong> distribuido diseñado para rastrear y gestionar cambios en archivos y proyectos de manera eficiente. Fue creado por Linus Torvalds en 2005 para gestionar el desarrollo del núcleo de Linux, pero rápidamente se convirtió en la herramienta más utilizada en el desarrollo de software. Este ayuda a los desarrolladores y equipos a colaborar de manera eficiente, manteniendo un registro completo de los cambios realizados en un proyecto. Es ideal para proyectos de software, pero también se puede usar para gestionar cualquier tipo de archivo, como documentos, páginas web o incluso proyectos creativos. Su uso garantiza la trazabilidad, la seguridad de los datos y la colaboración efectiva entre equipos.</p>
+<p>Para instalar Git, accede a la <a href="https://git-scm.com/">web oficial de Git</a> y descárgalo según tu sistema operativo,de código libre y abierto, diseñado para manejar todo, desde pequeños hasta proyectos muy grandes con velocidad y eficiencia. Es recomendable comenzar trabajando con la terminal y, una vez comprendidos los conceptos, utilizar una GUI como <strong>GitKraken o SourceTree</strong>.</p>
+<blockquote class='book-hint '>
+<p>Un <strong>repositorio</strong> de Git o GitHub es un espacio donde se guarda y gestiona el código fuente de un proyecto, incluyendo su historial de cambios. Git lo maneja de forma local y GitHub permite almacenarlo en la nube para colaborar con otras personas.</p>
+</blockquote><p>Comprobamos la versión instalada con:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Comprobar versión</span>
+</span></span><span style="display:flex;"><span>git -v
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Ayuda </span>
+</span></span><span style="display:flex;"><span>git --help</span></span></code></pre></div><h2 id="configuración">Configuración<a class="anchor" href="#configuraci%c3%b3n">#</a></h2>
+<p>Para empezar a trabajar con Git, realiza las configuraciones globales para el nombre de usuario y correo electrónico:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config --global user.name <span style="color:#e6db74">&#34;ymorgil&#34;</span>
+</span></span><span style="display:flex;"><span>git config --global user.email <span style="color:#e6db74">&#34;yerayeduc@gmail.com&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Verificar</span>
+</span></span><span style="display:flex;"><span>git config --list</span></span></code></pre></div><h2 id="comandos-básicos">Comandos básicos<a class="anchor" href="#comandos-b%c3%a1sicos">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Comando</th>
+          <th>Acción</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>git init</code></td>
+          <td>Inicializa un repositorio Git en el directorio actual. Al ejecutar Git crea una nueva carpeta oculta llamada <strong>.git</strong>, que contiene todos los archivos y configuraciones necesarias para hacer un seguimiento del historial de versiones. A partir de este momento, el directorio se convierte en un repositorio Git, y puedes comenzar a gestionar el código dentro de él. Este es el primer paso para iniciar el control de versiones de cualquier proyecto.</td>
+      </tr>
+      <tr>
+          <td><code>git status</code></td>
+          <td>Muestra estado actual de tu repositorio. Al ejecutarlo, Git te mostrará información sobre los archivos que han sido modificados, los que están en el área de preparación <strong>(staging area)</strong> listos para ser commiteados, y los archivos que aún no han sido añadidos. También te indicará si hay algún cambio que aún no se ha guardado en el repositorio, proporcionándote una visión clara de lo que ha ocurrido hasta el momento.</td>
+      </tr>
+      <tr>
+          <td><code>git add &lt;archivo&gt;</code></td>
+          <td>Añadir archivos individuales al área de preparación, también conocida como staging area. Esto le indica a Git que deseas incluir esos archivos modificados en el siguiente commit. Es una forma de organizar qué cambios se registrarán, permitiendo un control más detallado sobre qué se guarda en cada momento. Si tienes varios archivos modificados pero solo deseas incluir algunos en el próximo commit, puedes añadirlos todos utilizando git add.</td>
+      </tr>
+      <tr>
+          <td><code>git add .</code></td>
+          <td>Añade todos los archivos modificados al área de preparación.</td>
+      </tr>
+      <tr>
+          <td><code>git commit -m &quot;mensaje&quot;</code></td>
+          <td>Este comando es utilizado para guardar los cambios en el repositorio. Al ejecutar git commit, Git toma todos los archivos que han sido añadidos al área de preparación mediante git add y los almacena en el historial del repositorio, creando un nuevo commit. El mensaje que proporcionas con -m debe ser una descripción breve pero clara de los cambios realizados. Este es un paso crucial en el proceso de control de versiones, ya que permite mantener un registro detallado de cada cambio en el proyecto.</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p>El <code>stage area</code> lugar temporal donde eliges los archivos que quieres guardar. Es como una caja donde metes los cambios que quieres conservar. Luego, cuando estás listo, haces un commit, que es como sacar una &ldquo;foto&rdquo; de esos cambios para que queden guardados en el historial del proyecto.
+<strong>Stage area</strong> = eliges qué cambios guardar.
+<strong>Commit</strong> = guardar esos cambios de forma definitiva en el proyecto (como una foto del momento)</p>
+</blockquote><blockquote class='book-hint '>
+<p>Fichero <code>.gitignore</code> es donde podemos poner nombres de archivos o expresiones regulares que obtenga aquellos archivos que nosotros no queramos tener en cuenta a la hora de hacer los commit. Una vez agregados cuando hacemos el <strong>git status</strong> no saldrá en el listado estos archivos.</p>
+</blockquote><h1 id="2--ramas"><strong>2. 🌿 RAMAS</strong><a class="anchor" href="#2--ramas">#</a></h1>
+<p>Imagina que tu proyecto es un árbol, el <strong>tronco</strong> sería la rama principal (<code>main</code> o <code>master</code>) y cada <strong>rama</strong> nueva es como una rama lateral donde puedes trabajar sin tocar el código principal. Esta rama es una <strong>copia</strong> del estado actual del proyecto y puedes trabajar ahí sin afectar otras ramas. Además, puedes fusionarla (<strong>merge</strong>) con la principal para añadir tus cambios. En otras palabras es una versión alternativa del proyecto donde puedes hacer cambios sin afectar la versión principal. Se usa para:</p>
+<ul>
+<li>Probar nuevas ideas o funciones sin romper el código que ya funciona.</li>
+<li>Trabajar en equipo, donde cada persona trabaja en su propia rama.</li>
+<li>Organizar el desarrollo, separando tareas como corregir errores o añadir mejoras.</li>
+</ul>
+<h2 id="comandos-básicos-para-ramas">Comandos básicos para ramas<a class="anchor" href="#comandos-b%c3%a1sicos-para-ramas">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Comando</th>
+          <th>Acción</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>git branch</code></td>
+          <td>Ver ramas existentes</td>
+      </tr>
+      <tr>
+          <td><code>git branch nombre_rama</code></td>
+          <td>Crear una nueva rama</td>
+      </tr>
+      <tr>
+          <td><code>git checkout nombre_rama</code></td>
+          <td>Cambiar a otra rama</td>
+      </tr>
+      <tr>
+          <td><code>git checkout -b nombre_rama</code></td>
+          <td>Crear y cambiar a una nueva rama en un solo paso</td>
+      </tr>
+      <tr>
+          <td><code>git branch -m nuevo_nombre</code></td>
+          <td>Renombrar una rama</td>
+      </tr>
+      <tr>
+          <td><code>git branch -d nombre_rama</code></td>
+          <td>Borrar una rama local</td>
+      </tr>
+      <tr>
+          <td><code>git merge nombre_rama</code></td>
+          <td>Fusiona la rama indicada con la rama actual.</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote class='book-hint '>
+<p>Conflictos en git surge surge cuando al fusionar varias ramas, los equipos han modificado el mismo fichero. Si las modificaciones están en líneas diferentes del mismo archivo, Git puede fusionar sin conflicto. Si están en la misma línea, Git te pedirá que resuelvas el conflicto manualmente.</p>
+</blockquote><h2 id="ramas-remotas-en-git">Ramas remotas en Git<a class="anchor" href="#ramas-remotas-en-git">#</a></h2>
+<p><strong>Ramas remotas</strong> son como &ldquo;copias en la nube&rdquo; de tus ramas locales guardada en un <strong>repositorio remoto</strong> (por ejemplo, GitHub, GitLab o Bitbucket).</p>
+<ul>
+<li>Una <strong>rama local</strong> vive en tu ordenador.</li>
+<li>Una <strong>rama remota</strong> vive en el servidor del proyecto. Normalmente se llama <code>origin</code> por defecto.</li>
+<li>Ambas ramas pueden sincronizarse para compartir cambios.</li>
+</ul>
+<p>Las ramas remotas permiten:</p>
+<ul>
+<li>Compartir tu trabajo con otras personas.</li>
+<li>Recibir actualizaciones del equipo.</li>
+<li>Mantener una copia de seguridad del proyecto.</li>
+</ul>
+<table>
+  <thead>
+      <tr>
+          <th>Comando</th>
+          <th>Acción</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>git pull origin nombre_rama</code></td>
+          <td>Traer y fusionar cambios de una rama remota a tu rama local. (<strong>Descargar</strong>)</td>
+      </tr>
+      <tr>
+          <td><code>git pull</code></td>
+          <td>Sincroniza antes de trabajar para evitar conflictos.</td>
+      </tr>
+      <tr>
+          <td><code>git push origin nombre_rama</code></td>
+          <td>Subir tu rama local al remoto</td>
+      </tr>
+      <tr>
+          <td><code>git push origin --delete nombre_rama</code></td>
+          <td>Eliminar una rama remota</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="comandos-de-historial-y-navegación">Comandos de historial y navegación<a class="anchor" href="#comandos-de-historial-y-navegaci%c3%b3n">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Comando</th>
+          <th>Descripción</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>git log</code></td>
+          <td>Lista los commits realizados.</td>
+      </tr>
+      <tr>
+          <td><code>git log --graph</code></td>
+          <td>Muestra el historial como un gráfico.</td>
+      </tr>
+      <tr>
+          <td><code>git log --all --graph --pretty=oneline --decorate --oneline</code></td>
+          <td>Historial en formato compacto y gráfico.</td>
+      </tr>
+      <tr>
+          <td><code>git checkout &lt;id_del_commit&gt;</code></td>
+          <td>Cambia a un commit específico.</td>
+      </tr>
+      <tr>
+          <td><code>git diff</code></td>
+          <td>Compara cambios entre commits o ramas.</td>
+      </tr>
+      <tr>
+          <td><code>git reset &lt;id&gt;</code></td>
+          <td>Revierte al commit especificado.</td>
+      </tr>
+      <tr>
+          <td><code>git reset --hard</code></td>
+          <td>Sobrescribe todos los cambios no guardados.</td>
+      </tr>
+      <tr>
+          <td><code>git reflog</code></td>
+          <td>Muestra todos los commits realizados, incluso los borrados.</td>
+      </tr>
+      <tr>
+          <td><code>git tag</code></td>
+          <td>Etiqueta commits.</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="creación-de-alias">Creación de alias<a class="anchor" href="#creaci%c3%b3n-de-alias">#</a></h2>
+<p>Los alias se pueden crear de forma global. Por ejemplo, para un alias que muestra los logs en formato de árbol:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config --global alias.tree <span style="color:#e6db74">&#34;log --all --graph --pretty=oneline --decorate --oneline&#34;</span></span></span></code></pre></div><ul>
+<li><code>--all</code>: Muestra el historial de todas las ramas, incluidas las ramas remotas y locales.</li>
+<li><code>--graph</code>: Representa gráficamente el historial de confirmaciones como un árbol con líneas que conectan las ramas y fusiones.</li>
+<li><code>--pretty=oneline</code>: Muestra cada commit en una sola línea, lo que proporciona un resumen compacto del historial.</li>
+<li><code>--decorate</code>: Añade información adicional sobre las referencias, como nombres de ramas o etiquetas, asociadas a cada commit.</li>
+<li><code>--oneline</code>: Es un atajo para combinar &ndash;pretty=oneline y limitar la salida del identificador de cada commit a su abreviatura.</li>
+</ul>
+<p>Para ejecutarlo, usa:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git tree</span></span></code></pre></div><p><img src="img/image-0.png" alt="alt text" /></p>
+<h1 id="3--github"><strong>3. 🐱 GITHUB</strong><a class="anchor" href="#3--github">#</a></h1>
+<p>Plataforma de desarrollo colaborativo basada en la web que utiliza Git como sistema de control de versiones. Permite a los desarrolladores almacenar y gestionar proyectos de software, así como colaborar con otros usuarios. GitHub ofrece un entorno donde los usuarios pueden trabajar de manera conjunta en proyectos de código abierto y privado, facilitando la administración de versiones de código y el seguimiento de cambios realizados en el repositorio a lo largo del tiempo.</p>
+<p><img src="img/image-2.png" alt="alt text" /></p>
+<blockquote class='book-hint '>
+<p><code>Overview</code>: <strong>Visión general</strong> del repositorio o perfil. En ella, puedes encontrar información importante sobre el proyecto, como una descripción, estadísticas clave, como el número de commits recientes, contribuciones y otros detalles relevantes. También puedes ver información de la comunidad y actividades recientes, como pull requests abiertos o cerrados, y issues.</p>
+</blockquote><blockquote class='book-hint '>
+<p><code>Repositories</code>: <strong>Lista de todos los repositorios</strong> que el usuario ha creado o en los que tiene participación. Cada repositorio se presenta con su nombre, una breve descripción, el estado actual (activo o archivado) y la fecha del último commit. Desde esta pestaña, los usuarios pueden acceder directamente a cualquiera de sus repositorios para explorar el código, realizar modificaciones o colaborar con otros.</p>
+</blockquote><blockquote class='book-hint '>
+<p><code>Projects</code>: <strong>Gestionan los proyectos</strong> dentro de GitHub. Los proyectos son tableros o listas de tareas que ayudan a organizar y seguir el progreso de un conjunto de issues o tareas dentro de un repositorio. Aquí, puedes crear un nuevo proyecto, añadir columnas (como &ldquo;Pendiente&rdquo;, &ldquo;En progreso&rdquo;, &ldquo;Finalizado&rdquo;) y asociar issues o pull requests a esas columnas, facilitando así el seguimiento y la colaboración en tareas específicas.</p>
+</blockquote><blockquote class='book-hint '>
+<p><code>Packages</code>: <strong>Gestionar los paquetes o dependencias</strong> que se utilizan dentro del repositorio o que el repositorio mismo publica. GitHub permite almacenar y compartir paquetes de software, como bibliotecas o herramientas, mediante GitHub Packages. Esta sección ofrece un espacio para ver y gestionar los paquetes publicados, incluyendo las versiones disponibles y las configuraciones relacionadas con su uso.</p>
+</blockquote><blockquote class='book-hint '>
+<p><code>Stars</code>: <strong>Repositorios que te gustan</strong> o encuentras útiles. Al dar una estrella a un repositorio, lo estás marcando como favorito y lo añades a tu lista de repositorios favoritos. Esto sirve como una herramienta de organización personal, pero también permite a otros ver qué proyectos has encontrado interesantes o valiosos. Los repositorios con muchas estrellas suelen ser populares y bien valorados dentro de la comunidad de GitHub.</p>
+</blockquote><h2 id="repositorios">Repositorios<a class="anchor" href="#repositorios">#</a></h2>
+<p>Un <strong>repositorio</strong> es un espacio donde se guarda el código de un proyecto junto con su historial de cambios. Gracias a los repositorios, podemos llevar un control detallado de todas las versiones y colaborar con otras personas de forma ordenada. Una vez creada la cuenta en GitHub, puedes crear todos los repositorios que desees, tanto públicos como privados.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Repositorio</th>
+          <th>Tipo</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Repositorio Local</td>
+          <td>Se encuentra en tu propio ordenador. Aquí realizas tus cambios, añades archivos y guardas las versiones usando Git. Puedes trabajar sin conexión, y una vez que quieras compartir tu trabajo, sincronizas los cambios con un repositorio remoto.</td>
+      </tr>
+      <tr>
+          <td>Repositorio Remoto</td>
+          <td>Está alojado en un servidor, por ejemplo, en GitHub. Sirve para compartir tu proyecto con otros usuarios o para tener una copia de seguridad en la nube. Se conecta con el repositorio local para subir y descargar cambios.</td>
+      </tr>
+      <tr>
+          <td>Repositorio Principal</td>
+          <td>Con el mismo nombre que tu cuenta tiene un propósito especial, ya que puede ser utilizado para alojar una página web personal usando <strong>GitHub Pages</strong>, y también sirve como punto de referencia para otros proyectos que puedas tener. Además, cualquier cambio realizado en este repositorio principal se reflejará directamente en tu perfil de GitHub, lo que lo convierte en una vitrina de tu trabajo y contribuciones.  <code>https://github.com/&lt;usuario&gt;/&lt;repositorio&gt;</code>.</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="repositorio-remoto-en-github">Repositorio remoto en GitHub<a class="anchor" href="#repositorio-remoto-en-github">#</a></h2>
+<p>La sincronización entre un repositorio local y su contraparte en GitHub permite mantener actualizados los cambios realizados en tu máquina con la copia almacenada en la nube, garantizando así un flujo de trabajo continuo y seguro. Este proceso facilita la colaboración entre varios desarrolladores, ya que todos pueden acceder a la última versión del proyecto y aportar modificaciones de forma coordinada. Además, ofrece ventajas como el respaldo automático de tu trabajo, la posibilidad de trabajar desde diferentes dispositivos sin perder cambios, el control de versiones para recuperar estados anteriores y la integración con herramientas de desarrollo. A continuación, los pasos básicos para trabajar de manera eficiente:</p>
+<h3 id="-01-github"><strong>⇒ 01 GitHub</strong><a class="anchor" href="#-01-github">#</a></h3>
+<p>Crear una cuenta en GitHub es un proceso sencillo que te permite acceder a la plataforma de control de versiones y almacenamiento de código en la nube. Para ello, basta con visitar <a href="https://github.com">https://github.com</a> y pulsar en &ldquo;Sign up&rdquo;, donde deberás proporcionar un nombre de usuario único, un correo electrónico válido y una contraseña segura. Una vez completados estos datos, GitHub te guiará a través de la verificación de tu correo electrónico y la configuración inicial de tu perfil, incluyendo opciones como la visibilidad de tus repositorios y preferencias de notificación. Tener una cuenta en GitHub te da acceso a crear repositorios, colaborar en proyectos de otros usuarios y utilizar herramientas de gestión de versiones de manera eficiente.</p>
+<h3 id="-02-autenticación-ssh"><strong>⇒ 02 Autenticación SSH</strong><a class="anchor" href="#-02-autenticaci%c3%b3n-ssh">#</a></h3>
+<p>Configurar la autenticación SSH con GitHub te permite establecer una conexión segura entre tu máquina local y GitHub sin necesidad de introducir tu usuario y contraseña en cada operación. Esto se logra mediante un par de claves criptográficas, una privada que se guarda en tu equipo y una pública que se asocia a tu cuenta de GitHub.</p>
+<p>Para comenzar, primero verifica si ya tienes un par de claves SSH existente ejecutando el comando <code>ls -al ~/.ssh</code>. Si en la salida aparecen archivos como <code>id_ed25519</code> y <code>id_ed25519.pub</code> significa que ya tienes una clave generada y podrías reutilizarla. En caso contrario, debes generar un nuevo par de claves con <code>ssh-keygen -t ed25519 -C &quot;tuemail@example.com&quot;</code>. Este comando crea una clave segura y la asocia a tu correo electrónico de GitHub.</p>
+<p>Una vez creada, es necesario añadir la clave privada al agente SSH para que se gestione automáticamente. Inicia el agente con <code>eval &quot;$(ssh-agent -s)&quot;</code> y añade tu clave con <code>ssh-add ~/.ssh/id_ed25519</code>. Después de esto, obtén el contenido de la clave pública usando <code>cat ~/.ssh/id_ed25519.pub</code> y copia todo el texto que se muestre, que empezará por <code>ssh-ed25519</code>.</p>
+<p>El siguiente paso es registrar esta clave pública en GitHub. Para ello, inicia sesión, entra en <strong>Settings → SSH and GPG keys</strong>, pulsa en <strong>New SSH key</strong>, escribe un título descriptivo para identificar el dispositivo y pega la clave pública en el campo correspondiente. Guarda los cambios y la clave quedará vinculada a tu cuenta.</p>
+<p>Para verificar que la conexión funciona correctamente, utiliza <code>ssh -T git@github.com</code>. Si todo está bien, recibirás un mensaje indicando que la autenticación fue exitosa.</p>
+<p><img src="img/img05-sshgithub.jpg" alt="alt text" /></p>
+<p>Para más información y detalles, consulta la documentación oficial de GitHub sobre <a href="https://docs.github.com/es/authentication/connecting-to-github-with-ssh">configuración de SSH</a>.</p>
+<h3 id="-03-sincronizar-repositorios"><strong>⇒ 03 Sincronizar repositorios</strong><a class="anchor" href="#-03-sincronizar-repositorios">#</a></h3>
+<p>Cuando ya tienes un repositorio local (<strong>con algún commit</strong>) y deseas subirlo a GitHub, primero es necesario crear un repositorio vacío en GitHub. Esto se hace desde la plataforma web pulsando en <strong>New repository</strong>, eligiendo un nombre para el repositorio y asegurándote de no añadir archivos como README, <code>.gitignore</code> o licencia si ya existen en tu proyecto local, para evitar conflictos. Una vez creado el repositorio en GitHub, obtienes la URL del mismo, esta se utiliza para enlazar tu repositorio local con el remoto mediante el comando <code>git remote add origin &lt;URL-del-repositorio&gt;</code>.</p>
+<p><img src="img/img06-gitrepo.jpg" alt="alt text" /></p>
+<p>A partir de este momento,asegúrate de que tu rama principal se llama <code>main</code> con <code>git branch -M main</code> y sube el contenido con <code>git push -u origin main</code>. Es recomendable usar <code>git push -u origin main</code> la primera vez para establecer la relación entre la rama local y la remota. Después de eso, podrás usar simplemente <code>git push</code> para actualizar los cambios.</p>
+<p><img src="img/img07-gitremote.jpg" alt="alt text" /></p>
+<table>
+  <thead>
+      <tr>
+          <th>Comandos</th>
+          <th>Descripción</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>git remote</code></td>
+          <td>Gestiona la conexión entre el repositorio local y los remotos. Sin parámetros, muestra los nombres de los remotos configurados (por defecto <code>origin</code>). Con <code>-v</code>, muestra las URL asociadas diferenciando entre &ldquo;fetch&rdquo; (obtener) y &ldquo;push&rdquo; (enviar).</td>
+      </tr>
+      <tr>
+          <td><code>git push</code></td>
+          <td>Sube los commits confirmados en local a un repositorio remoto, actualizando la rama remota correspondiente. Sintaxis: <code>git push origin nombre-de-la-rama</code>.</td>
+      </tr>
+      <tr>
+          <td><code>git fetch</code></td>
+          <td>Obtiene las últimas actualizaciones del remoto sin modificar el área de trabajo local. Descarga cambios de ramas remotas, pero no los fusiona. Para integrarlos, usa <code>git merge</code> o <code>git pull</code>.</td>
+      </tr>
+      <tr>
+          <td><code>git pull</code></td>
+          <td>Combina <code>git fetch</code> y <code>git merge</code>: descarga cambios del remoto y los fusiona automáticamente con la rama local.</td>
+      </tr>
+      <tr>
+          <td><code>git clone</code></td>
+          <td>Crea una copia completa de un repositorio remoto en local, incluyendo historial de commits, ramas y archivos. Sintaxis: <code>git clone &lt;url_del_repositorio&gt;</code>.</td>
+      </tr>
+  </tbody>
+</table>
+<p><img src="img/img01-gitcomandos.jpg" alt="alt text" /></p>
+<h2 id="flujo-colaborativo">Flujo colaborativo<a class="anchor" href="#flujo-colaborativo">#</a></h2>
+<p>Conjunto de prácticas y herramientas que permiten a los desarrolladores trabajar de manera conjunta y eficiente en un proyecto, gestionando versiones, contribuciones y revisiones de código de forma ordenada. GitHub, al ser una plataforma basada en Git, facilita la colaboración en proyectos a través de repositorios remotos y diversas funcionalidades como pull requests, branches y revisiones de código. <strong>Procedimiento:</strong></p>
+<p><strong>1. Haz un &ldquo;fork&rdquo; del repositorio</strong></p>
+<blockquote class='book-hint '>
+<p>Significa crear una copia del repositorio original bajo tu cuenta de GitHub. Esto te permite experimentar y hacer cambios en el código sin modificar el proyecto original. Es un paso necesario para contribuir a proyectos de código abierto donde no tienes permisos directos de escritura.</p>
+</blockquote><p><strong>2. Clona el fork en local</strong></p>
+<blockquote class='book-hint '>
+<p>Una vez que has hecho un fork, el siguiente paso es clonar el repositorio a tu máquina local con el comando <code>git clone</code>. Esto crea una copia exacta de tu repositorio en tu computadora, permitiéndote realizar cambios de manera local antes de enviarlos de vuelta a GitHub.</p>
+</blockquote><p><strong>3. Realiza cambios, añade commits y sube los cambios con <code>git push</code></strong></p>
+<blockquote class='book-hint '>
+<p>Después de clonar el repositorio, puedes hacer cambios en el código. Una vez realizados los cambios, debes hacer un commit para guardarlos en tu repositorio local. Luego, subes esos cambios al repositorio remoto (tu fork) utilizando <code>git push</code>. Esto permite que tus modificaciones estén disponibles en GitHub.</p>
+</blockquote><p><strong>4. Sincroniza el fork si hay cambios en el repositorio original</strong></p>
+<blockquote class='book-hint '>
+<p>Si otros colaboradores han realizado cambios en el repositorio original después de hacer tu fork, es importante mantener tu fork actualizado. Esto se hace sincronizando tu fork con el repositorio original mediante comandos como <code>git fetch</code> y <code>git merge</code>, para que puedas integrar los cambios más recientes antes de enviar tu pull request.</p>
+</blockquote><p><strong>5. Propón cambios mediante un &ldquo;pull request&rdquo;</strong></p>
+<blockquote class='book-hint '>
+<p>Una vez que hayas subido tus cambios a tu repositorio remoto, el siguiente paso es abrir un pull request (PR) en el repositorio original. Esto es una solicitud para que el propietario del repositorio revise tus cambios y los integre en el proyecto principal. El PR facilita la discusión y revisión del código propuesto.</p>
+</blockquote><p><strong>6. El propietario del repositorio original revisará y aceptará los cambios</strong></p>
+<blockquote class='book-hint '>
+<p>El propietario o mantenedor del repositorio original revisará los cambios propuestos en el pull request. Si todo está correcto, lo fusionará con la rama principal del repositorio. Si es necesario, puede pedir modificaciones adicionales antes de aceptar el PR. Una vez aprobado, los cambios se incorporan oficialmente al proyecto.</p>
+</blockquote><h2 id="herramientas-para-git-y-github">Herramientas para Git y GitHub<a class="anchor" href="#herramientas-para-git-y-github">#</a></h2>
+<h3 id="aplicaciones-con-interfaz-gráfica">Aplicaciones con interfaz gráfica<a class="anchor" href="#aplicaciones-con-interfaz-gr%c3%a1fica">#</a></h3>
+<p>Permiten gestionar repositorios sin usar exclusivamente la línea de comandos. Facilitan tareas como crear commits, revisar el historial, resolver conflictos, manejar ramas y sincronizar con repositorios remotos en GitHub mediante botones, menús y paneles interactivos. Ejemplos populares incluyen GitHub Desktop, Sourcetree, GitKraken o la integración gráfica que ofrecen editores como Visual Studio Code. Estas herramientas son útiles para quienes están empezando o prefieren una experiencia visual, aunque conocer los comandos básicos de Git sigue siendo esencial para un control total del flujo de trabajo.</p>
+<ul>
+<li><a href="https://desktop.github.com/">GitHub Desktop</a></li>
+<li><a href="https://www.gitkraken.com/">GitKraken</a></li>
+<li><a href="https://www.sourcetreeapp.com/">SourceTree</a></li>
+</ul>
+<h3 id="github-pages">GitHub Pages<a class="anchor" href="#github-pages">#</a></h3>
+<p>Servicio gratuito que permite a los usuarios crear y alojar sitios web directamente desde un repositorio de GitHub. Este servicio es ideal para proyectos personales, blogs, portafolios, documentación de proyectos, entre otros. Los usuarios pueden configurar un repositorio con archivos estáticos (HTML, CSS, JavaScript) y GitHub Pages se encarga de alojar el contenido en línea, generando una URL específica bajo el dominio github.io. La configuración y actualización de los sitios web se realiza directamente desde el repositorio en GitHub, lo que facilita el control de versiones, la colaboración y la automatización del proceso de publicación.</p>
+<blockquote class='book-hint '>
+<p><strong>Hugo</strong>: Generador de sitios estáticos de código abierto que permite crear sitios web rápidos y eficientes a partir de contenido escrito en archivos de texto (Markdown). Hugo convierte estos archivos en páginas web completamente funcionales, generando el código HTML necesario para visualizar las páginas en el navegador. Es conocido por su rapidez en la construcción del sitio, gracias a su capacidad de procesamiento de contenido y plantillas. Hugo es ampliamente utilizado para crear blogs, documentación de proyectos y sitios web personales debido a su flexibilidad y facilidad de uso. Una de sus ventajas es la integración con plataformas como GitHub Pages, donde se puede alojar un sitio Hugo sin necesidad de servidores complejos, simplemente generando los archivos estáticos y subiéndolos a un repositorio en GitHub.</p>
+</blockquote><h1 id="3--markdown"><strong>3. 📄 Markdown</strong><a class="anchor" href="#3--markdown">#</a></h1>
+<p>Markdown es un lenguaje de marcado ligero diseñado para ser fácil de leer y escribir, utilizado principalmente para convertir texto plano en contenido estructurado que se puede convertir a HTML. Su sintaxis es simple y consiste en una serie de símbolos y caracteres especiales que permiten dar formato al texto, como encabezados, negritas, listas, enlaces, imágenes, entre otros, sin perder la legibilidad del texto original.</p>
+<p>Su uso es muy común en plataformas de colaboración en línea, como GitHub, Reddit, y muchas otras, donde los usuarios pueden escribir documentos, comentarios o documentación técnica de manera sencilla y efectiva. Los desarrolladores lo utilizan para escribir archivos README, documentación de proyectos o incluso para redactar mensajes en foros y blogs. La principal ventaja de Markdown es que, aunque se usa para generar contenido con formato, el texto es legible y fácilmente editable como texto plano. Además, se puede convertir de manera eficiente a otros formatos, como HTML, lo que lo convierte en una herramienta muy popular para crear contenido web.</p>
+<blockquote class='book-hint '>
+<p>Sintaxis básica</p>
+</blockquote><table>
+  <thead>
+      <tr>
+          <th>Element</th>
+          <th>Markdown Syntax</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Heading</strong></td>
+          <td><code># H1</code><!-- raw HTML omitted --><code>## H2</code><!-- raw HTML omitted --><code>### H3</code></td>
+      </tr>
+      <tr>
+          <td><strong>Bold</strong></td>
+          <td><code>**bold text**</code></td>
+      </tr>
+      <tr>
+          <td><strong>Italic</strong></td>
+          <td><code>*italicized text*</code></td>
+      </tr>
+      <tr>
+          <td><strong>Blockquote</strong></td>
+          <td><code>&gt; blockquote</code></td>
+      </tr>
+      <tr>
+          <td><strong>Lista ordenada</strong></td>
+          <td><code>1. First item</code><!-- raw HTML omitted --><code>2. Second item</code><!-- raw HTML omitted --><code>3. Third item</code></td>
+      </tr>
+      <tr>
+          <td><strong>Lista desordenada</strong></td>
+          <td><code>- First item</code><!-- raw HTML omitted --><code>- Second item</code><!-- raw HTML omitted --><code>- Third item</code></td>
+      </tr>
+      <tr>
+          <td><strong>Código</strong></td>
+          <td><code>`code`</code></td>
+      </tr>
+      <tr>
+          <td><strong>Línea Horizontal</strong></td>
+          <td><code>---</code></td>
+      </tr>
+      <tr>
+          <td><strong>Enlace</strong></td>
+          <td><code>[title](https://www.example.com)</code></td>
+      </tr>
+      <tr>
+          <td><strong>Imagen</strong></td>
+          <td><code>![alt text](image.jpg)</code></td>
+      </tr>
+  </tbody>
+</table>
+<h1 id="4-enlaces-de-interés"><strong>4. 🌐Enlaces de interés</strong><a class="anchor" href="#4-enlaces-de-inter%c3%a9s">#</a></h1>
+<ul>
+<li><a href="https://git-scm.com/">Web oficial Git</a></li>
+<li><a href="https://git-scm.com/book/es/v2">Libro de Git en español</a></li>
+<li><a href="https://docs.github.com/">Documentación de GitHub</a></li>
+<li><a href="https://docs.github.com/es/authentication/connecting-to-github-with-ssh">Configuración SSH</a></li>
+<li><a href="https://pages.github.com/">GitHub Pages</a></li>
+<li><a href="https://github.com/features/actions">GitHub Actions</a></li>
+<li><a href="https://github.com/mouredev/">Retos de programación de la comunidad</a></li>
+<li><a href="https://docs.github.com/es/get-started/writing-on-github">Guía de Markdown en GitHub</a></li>
+<li><a href="https://markdown.es/sintaxis-markdown/">Sintaxis de Markdown</a></li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+
+
+
+
+  
+  
+  
+  <div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="/docs/general/readme/" class="flex align-center">
+        <img src="/icons/backward.svg" class="book-icon" alt="Backward" />
+        <span>Readme</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="/docs/asir-add/exa/a/" class="flex align-center">
+        <span>A</span>
+        <img src="/icons/forward.svg" class="book-icon" alt="Forward" />
+      </a>
+    
+    </span>
+  </div>
+  
+
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#heading"> </a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#configuración">Configuración</a></li>
+    <li><a href="#comandos-básicos">Comandos básicos</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#comandos-básicos-para-ramas">Comandos básicos para ramas</a></li>
+    <li><a href="#ramas-remotas-en-git">Ramas remotas en Git</a></li>
+    <li><a href="#comandos-de-historial-y-navegación">Comandos de historial y navegación</a></li>
+    <li><a href="#creación-de-alias">Creación de alias</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#repositorios">Repositorios</a></li>
+    <li><a href="#repositorio-remoto-en-github">Repositorio remoto en GitHub</a>
+      <ul>
+        <li><a href="#-01-github"><strong>⇒ 01 GitHub</strong></a></li>
+        <li><a href="#-02-autenticación-ssh"><strong>⇒ 02 Autenticación SSH</strong></a></li>
+        <li><a href="#-03-sincronizar-repositorios"><strong>⇒ 03 Sincronizar repositorios</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#flujo-colaborativo">Flujo colaborativo</a></li>
+    <li><a href="#herramientas-para-git-y-github">Herramientas para Git y GitHub</a>
+      <ul>
+        <li><a href="#aplicaciones-con-interfaz-gráfica">Aplicaciones con interfaz gráfica</a></li>
+        <li><a href="#github-pages">GitHub Pages</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head><script src="/web/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=web/livereload" data-no-instant defer></script>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content=" 🐳 Instalación de Docker &#43; WSL &#43; Portainer en Windows# 🐳 Instalación de Docker &#43; WSL &#43; Portainer en Windows 👉 Paso 1: Activar características de Windows (WSL) 👉 Paso 2: Instalación de WSL &#43; Ubuntu 24.04 Powershell Descargar terminal Actualizar Ubuntu 👉 Paso 3: Instalación de Docker Desktop &#43; integración con WSL 3.1 Instalar Docker Desktop con winget en Windows 3.2 Abrir Docker Desktop Comprobar Docker desde Ubuntu 👉 Paso 4: Portainer Instalar Portainer Trabajo con Docker en Visual Studio Code usando WSL 1. Ejecutar Visual Studio Code en Ubuntu (WSL) 1.1 Abrir Ubuntu (WSL) 1.2 Ir al directorio de trabajo 1.3 Abrir Visual Studio Code desde Ubuntu 1.4 Comprobar que Docker funciona 2. Uso de contenedores Docker desde Visual Studio Code 2.1 Crear un proyecto Python 2.2 Crear un script Python 2.3 Crear un Dockerfile 2.4 Construir la imagen 2.5 Ejecutar el contenedor Resumen Guía paso a paso para preparar un entorno con WSL, Ubuntu 24.04, Docker Desktop y Portainer. 👉 Paso 1: Activar características de Windows (WSL)# Abrir Características de Windows y activar:
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/web/docker/01-docker/">
+  <meta property="og:site_name" content="My New Hugo Project">
+  <meta property="og:title" content="My New Hugo Project">
+  <meta property="og:description" content="🐳 Instalación de Docker &#43; WSL &#43; Portainer en Windows# 🐳 Instalación de Docker &#43; WSL &#43; Portainer en Windows 👉 Paso 1: Activar características de Windows (WSL) 👉 Paso 2: Instalación de WSL &#43; Ubuntu 24.04 Powershell Descargar terminal Actualizar Ubuntu 👉 Paso 3: Instalación de Docker Desktop &#43; integración con WSL 3.1 Instalar Docker Desktop con winget en Windows 3.2 Abrir Docker Desktop Comprobar Docker desde Ubuntu 👉 Paso 4: Portainer Instalar Portainer Trabajo con Docker en Visual Studio Code usando WSL 1. Ejecutar Visual Studio Code en Ubuntu (WSL) 1.1 Abrir Ubuntu (WSL) 1.2 Ir al directorio de trabajo 1.3 Abrir Visual Studio Code desde Ubuntu 1.4 Comprobar que Docker funciona 2. Uso de contenedores Docker desde Visual Studio Code 2.1 Crear un proyecto Python 2.2 Crear un script Python 2.3 Crear un Dockerfile 2.4 Construir la imagen 2.5 Ejecutar el contenedor Resumen Guía paso a paso para preparar un entorno con WSL, Ubuntu 24.04, Docker Desktop y Portainer. 👉 Paso 1: Activar características de Windows (WSL)# Abrir Características de Windows y activar:">
+  <meta property="og:locale" content="es">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docker">
+
+
+  <meta itemprop="name" content="My New Hugo Project">
+  <meta itemprop="description" content="🐳 Instalación de Docker &#43; WSL &#43; Portainer en Windows# 🐳 Instalación de Docker &#43; WSL &#43; Portainer en Windows 👉 Paso 1: Activar características de Windows (WSL) 👉 Paso 2: Instalación de WSL &#43; Ubuntu 24.04 Powershell Descargar terminal Actualizar Ubuntu 👉 Paso 3: Instalación de Docker Desktop &#43; integración con WSL 3.1 Instalar Docker Desktop con winget en Windows 3.2 Abrir Docker Desktop Comprobar Docker desde Ubuntu 👉 Paso 4: Portainer Instalar Portainer Trabajo con Docker en Visual Studio Code usando WSL 1. Ejecutar Visual Studio Code en Ubuntu (WSL) 1.1 Abrir Ubuntu (WSL) 1.2 Ir al directorio de trabajo 1.3 Abrir Visual Studio Code desde Ubuntu 1.4 Comprobar que Docker funciona 2. Uso de contenedores Docker desde Visual Studio Code 2.1 Crear un proyecto Python 2.2 Crear un script Python 2.3 Crear un Dockerfile 2.4 Construir la imagen 2.5 Ejecutar el contenedor Resumen Guía paso a paso para preparar un entorno con WSL, Ubuntu 24.04, Docker Desktop y Portainer. 👉 Paso 1: Activar características de Windows (WSL)# Abrir Características de Windows y activar:">
+  <meta itemprop="wordCount" content="631">
+
+<title>01 Docker | My New Hugo Project</title>
+<link rel="icon" href="/web/favicon.png" >
+<link rel="manifest" href="/web/manifest.json">
+<link rel="canonical" href="http://localhost:1313/web/docker/01-docker/">
+<link rel="stylesheet" href="/web/book.min.4d6d5ad3b0ae85d2a15b20ab217863f70db543e46314629e239ced759e674898.css" integrity="sha256-TW1a07CuhdKhWyCrIXhj9w21Q&#43;RjFGKeI5ztdZ5nSJg=" crossorigin="anonymous">
+
+
+  <script defer src="/web/fuse.min.js"></script>
+  <script defer src="/web/en.search.min.43436279ba5d04993a72b62883b6dd6edd0027fb568d8f6114364bf0453df55f.js" integrity="sha256-Q0NiebpdBJk6crYog7bdbt0AJ/tWjY9hFDZL8EU99V8=" crossorigin="anonymous"></script>
+
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-docker">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/web/"><span>My New Hugo Project</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input id="book-search-input" type="text" 
+    placeholder="Buscar"
+    aria-label="Buscar"
+    maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/web/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>01 Docker</h3>
+
+  <label for="toc-control">
+    
+    <img src="/web/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#powershell">Powershell</a></li>
+    <li><a href="#descargar-terminal">Descargar terminal</a></li>
+    <li><a href="#actualizar-ubuntu">Actualizar Ubuntu</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#31-instalar-docker-desktop-con-winget-en-windows">3.1 Instalar Docker Desktop con winget en Windows</a></li>
+        <li><a href="#32-abrir-docker-desktop">3.2 Abrir Docker Desktop</a></li>
+        <li><a href="#comprobar-docker-desde-ubuntu">Comprobar Docker desde Ubuntu</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#instalar-portainer">Instalar Portainer</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><blockquote class='book-hint '>
+<h1 id="-instalación-de-docker--wsl--portainer-en-windows">🐳 Instalación de Docker + WSL + Portainer en Windows<a class="anchor" href="#-instalaci%c3%b3n-de-docker--wsl--portainer-en-windows">#</a></h1>
+</blockquote><ul>
+<li><a href="#-instalaci%c3%b3n-de-docker--wsl--portainer-en-windows">🐳 Instalación de Docker + WSL + Portainer en Windows</a></li>
+<li><a href="#-paso-1-activar-caracter%c3%adsticas-de-windows-wsl">👉 Paso 1: Activar características de Windows (WSL)</a></li>
+<li><a href="#-paso-2-instalaci%c3%b3n-de-wsl--ubuntu-2404">👉 Paso 2: Instalación de WSL + Ubuntu 24.04</a>
+<ul>
+<li><a href="#powershell">Powershell</a></li>
+<li><a href="#descargar-terminal">Descargar terminal</a></li>
+<li><a href="#actualizar-ubuntu">Actualizar Ubuntu</a></li>
+</ul>
+</li>
+<li><a href="#-paso-3-instalaci%c3%b3n-de-docker-desktop--integraci%c3%b3n-con-wsl">👉 Paso 3: Instalación de Docker Desktop + integración con WSL</a>
+<ul>
+<li><a href="#31-instalar-docker-desktop-con-winget-en-windows">3.1 Instalar Docker Desktop con winget en Windows</a></li>
+<li><a href="#32-abrir-docker-desktop">3.2 Abrir Docker Desktop</a></li>
+<li><a href="#comprobar-docker-desde-ubuntu">Comprobar Docker desde Ubuntu</a></li>
+</ul>
+</li>
+<li><a href="#-paso-4-portainer">👉 Paso 4: Portainer</a>
+<ul>
+<li><a href="#instalar-portainer">Instalar Portainer</a></li>
+</ul>
+</li>
+<li><a href="#trabajo-con-docker-en-visual-studio-code-usando-wsl">Trabajo con Docker en Visual Studio Code usando WSL</a></li>
+<li><a href="#1-ejecutar-visual-studio-code-en-ubuntu-wsl">1. Ejecutar Visual Studio Code en Ubuntu (WSL)</a>
+<ul>
+<li><a href="#11-abrir-ubuntu-wsl">1.1 Abrir Ubuntu (WSL)</a></li>
+<li><a href="#12-ir-al-directorio-de-trabajo">1.2 Ir al directorio de trabajo</a></li>
+<li><a href="#13-abrir-visual-studio-code-desde-ubuntu">1.3 Abrir Visual Studio Code desde Ubuntu</a></li>
+<li><a href="#14-comprobar-que-docker-funciona">1.4 Comprobar que Docker funciona</a></li>
+</ul>
+</li>
+<li><a href="#2-uso-de-contenedores-docker-desde-visual-studio-code">2. Uso de contenedores Docker desde Visual Studio Code</a>
+<ul>
+<li><a href="#21-crear-un-proyecto-python">2.1 Crear un proyecto Python</a></li>
+<li><a href="#22-crear-un-script-python">2.2 Crear un script Python</a></li>
+<li><a href="#23-crear-un-dockerfile">2.3 Crear un Dockerfile</a></li>
+<li><a href="#24-construir-la-imagen">2.4 Construir la imagen</a></li>
+<li><a href="#25-ejecutar-el-contenedor">2.5 Ejecutar el contenedor</a></li>
+</ul>
+</li>
+<li><a href="#resumen">Resumen</a>
+Guía paso a paso para preparar un entorno con WSL, Ubuntu 24.04, Docker Desktop y Portainer.</li>
+</ul>
+<h1 id="-paso-1-activar-características-de-windows-wsl">👉 Paso 1: Activar características de Windows (WSL)<a class="anchor" href="#-paso-1-activar-caracter%c3%adsticas-de-windows-wsl">#</a></h1>
+<p>Abrir Características de Windows y activar:</p>
+<ul>
+<li>Plataforma de máquina virtual</li>
+<li>Subsistema de Windows para Linux</li>
+</ul>
+<p><img src="img/docker01.png" alt="alt text" /></p>
+<h1 id="-paso-2-instalación-de-wsl--ubuntu-2404">👉 Paso 2: Instalación de WSL + Ubuntu 24.04<a class="anchor" href="#-paso-2-instalaci%c3%b3n-de-wsl--ubuntu-2404">#</a></h1>
+<h2 id="powershell">Powershell<a class="anchor" href="#powershell">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># Instalar WSL con winget</span>
+</span></span><span style="display:flex;"><span>winget install Microsoft.WSL 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Comprobar</span>
+</span></span><span style="display:flex;"><span>wsl --version
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Instalar Ubuntu 24.04</span>
+</span></span><span style="display:flex;"><span>wsl --install -d Ubuntu-<span style="color:#ae81ff">24.04</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Si no aparece esa versión, puedes listar disponibles con:</span>
+</span></span><span style="display:flex;"><span>wsl --list --online</span></span></code></pre></div><p>La primera vez te pedirá:  [Usuario]  [Contraseña]</p>
+<h2 id="descargar-terminal">Descargar terminal<a class="anchor" href="#descargar-terminal">#</a></h2>
+<p>La Terminal de Windows es una herramienta &ldquo;todo en uno&rdquo; que puedes obtener gratis desde la Microsoft Store; una vez instalada, basta con buscarla en el menú inicio para ejecutarla. Su principal ventaja es que permite abrir múltiples pestañas con diferentes entornos (como PowerShell o CMD) en una sola ventana, ofreciendo además una personalización total de colores y fuentes para que trabajar con comandos sea mucho más cómodo y visual.</p>
+<p><img src="img/docker02.png" alt="alt text" /></p>
+<h2 id="actualizar-ubuntu">Actualizar Ubuntu<a class="anchor" href="#actualizar-ubuntu">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update <span style="color:#f92672">&amp;&amp;</span> sudo apt upgrade -y <span style="color:#f92672">&amp;&amp;</span> apt autoremove</span></span></code></pre></div><h1 id="-paso-3-instalación-de-docker-desktop--integración-con-wsl">👉 Paso 3: Instalación de Docker Desktop + integración con WSL<a class="anchor" href="#-paso-3-instalaci%c3%b3n-de-docker-desktop--integraci%c3%b3n-con-wsl">#</a></h1>
+<h3 id="31-instalar-docker-desktop-con-winget-en-windows">3.1 Instalar Docker Desktop con winget en Windows<a class="anchor" href="#31-instalar-docker-desktop-con-winget-en-windows">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>winget install Docker.DockerDesktop</span></span></code></pre></div><h3 id="32-abrir-docker-desktop">3.2 Abrir Docker Desktop<a class="anchor" href="#32-abrir-docker-desktop">#</a></h3>
+<ol>
+<li>Iniciar Docker Desktop desde el menú de inicio</li>
+<li>Esperar a que termine la configuración</li>
+<li>Ir a:  <strong>Settings → Resources → WSL Integration</strong></li>
+<li>Activar:  Ubuntu-24.04</li>
+</ol>
+<h3 id="comprobar-docker-desde-ubuntu">Comprobar Docker desde Ubuntu<a class="anchor" href="#comprobar-docker-desde-ubuntu">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Abrir Ubuntu y ejecutar:</span>
+</span></span><span style="display:flex;"><span>docker --version
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Probar contenedor:</span>
+</span></span><span style="display:flex;"><span>docker run hello-world</span></span></code></pre></div><h1 id="-paso-4-portainer">👉 Paso 4: Portainer<a class="anchor" href="#-paso-4-portainer">#</a></h1>
+<h3 id="instalar-portainer">Instalar Portainer<a class="anchor" href="#instalar-portainer">#</a></h3>
+<blockquote class='book-hint '>
+<p>Para instalar Portainer en Docker Desktop, lo más sencillo es utilizar las extensiones. Solo tienes que abrir Docker Desktop, ir a la sección Extensions en el menú lateral izquierdo y buscar &ldquo;Portainer&rdquo; en el buscador. Haz clic en el botón de instalar y la aplicación se encargará de descargar la imagen necesaria y configurar el contenedor de gestión automáticamente.</p>
+</blockquote><blockquote class='book-hint '>
+<p>Una vez instalado, verás el icono de Portainer en la barra lateral. Al hacer clic por primera vez, el sistema te pedirá crear una contraseña de administrador de al menos 12 caracteres para proteger el acceso. Tras este paso, selecciona el entorno &ldquo;local&rdquo; para que Portainer se conecte al motor de Docker de tu ordenador y puedas empezar a ver todos tus contenedores activos.</p>
+</blockquote><blockquote class='book-hint '>
+<p>Utilizarlo es muy intuitivo, ya que sustituye los comandos de la terminal por una interfaz gráfica. Desde el panel de control, puedes monitorizar el consumo de CPU y RAM de cada contenedor, revisar los logs en tiempo real para buscar errores o entrar directamente a la consola de una base de datos con un solo clic. Es ideal para gestionar redes y volúmenes de forma visual, algo que en Docker Desktop suele estar más limitado.</p>
+</blockquote><blockquote class='book-hint '>
+<p>Además, una de sus funciones más potentes son los Stacks, que te permiten desplegar aplicaciones completas copiando y pegando el código de tus archivos docker-compose.yml directamente en el navegador. Esto facilita enormemente el despliegue de proyectos complejos sin tener que gestionar archivos locales constantemente.</p>
+</blockquote></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#powershell">Powershell</a></li>
+    <li><a href="#descargar-terminal">Descargar terminal</a></li>
+    <li><a href="#actualizar-ubuntu">Actualizar Ubuntu</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#31-instalar-docker-desktop-con-winget-en-windows">3.1 Instalar Docker Desktop con winget en Windows</a></li>
+        <li><a href="#32-abrir-docker-desktop">3.2 Abrir Docker Desktop</a></li>
+        <li><a href="#comprobar-docker-desde-ubuntu">Comprobar Docker desde Ubuntu</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#instalar-portainer">Instalar Portainer</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

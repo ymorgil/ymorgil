@@ -1,0 +1,9 @@
+baseURL = 'https://ymorgil.github.io/web/'
+languageCode = 'es'
+title = 'Proyecto ymorgil'
+# Tema 
+theme = "hugo-book"
+[params]
+  BookTheme = 'auto'
+
+enableEmoji = true

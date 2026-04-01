@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/docs/general/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/general/pautas_curso/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/asir-add/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/docker/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/asir-add/1.1-control-de-versiones/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/asir-add/exa/a/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/asir-add/readme/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/docker/01-docker/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/docker/02-docker-vsc/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/general/configuraciones_b%C3%A1sicas/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/general/manual_veyon/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/general/readme/</loc>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/</loc>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+  </url>
+</urlset>
